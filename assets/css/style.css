@@ -40,7 +40,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     list-style: none;
 }
 img{
-    max-width: 800px;
+    max-width: 100vw;
 }
 div.flex{
     display: flex;
@@ -60,14 +60,28 @@ div.container{
     max-width: 1140px;
     margin:0 auto;
 }
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 /* GERAL */
   
+h2{
+    font-family: 'Montserrat';
+    color: #303030;
+}
+
 /* HTML */
-html{}
+html{
+    font-family: 'Lato'
+}
 /* HTML */
   
 /* BODY */
-body{}
+body{
+    text-align: center;
+}
 /* BODY */
   
 /* HEADER */
@@ -95,9 +109,191 @@ main{}
 
 /* EXTRAS */
   
+.secaoCursos{
+}
+.secaoCursos h3{
+    font-size: 19px;
+    color: #303030;
+}
+
+.secaoCursos p{
+    font-size: 16px;
+    color: #818181;
+}
+.secaoCursos header p{
+    color: #303030;
+}
+
+.secaoCalendar header{
+    line-height: 12vh;
+}
+
+.secaoCalendar header p{
+    line-height: 4vh;
+    margin-left: 20vw;
+    width: 60vw;
+    font-size: larger;
+}
+.calendario h3{
+    color: #303030;
+    font-weight: normal;
+    padding: 10% 0;
+}
+
+.calendario p{
+    color: #818181;
+    padding: 5% 5%;
+    border-bottom: 0.1vh #818181 solid;
+    line-height: 4vh;
+}
+
+.calendario{
+    display: flex;
+}
+.calendario li{
+
+    border: #00043e solid 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calendario-data{
+    padding: 8% 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: #00043e;
+    font-size: 4vh;
+}
+.calendario-data-rodape span{
+    color: #818181;
+    display: block;
+    font-size: 4vh;
+    margin: 2vh;
+}
+.calendario-data-rodape{
+    height: 15vh;
+}
+
+.calendario-data-rodape button{
+    height: 5vh;
+    width: 60vw ;
+    background-color: #007aff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 1.25rem;
+}
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
+    @media screen and (max-width:799px){
+        
+        .secaoCursos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px;
+            line-height: 60px;
+        }
+
+        .secaoCursos header{
+            margin: 20% 0;
+        }
+        
+        .secaoCursos__item{
+            width: 80vw;
+            height: 50vh;
+        }
+
+        .secaoCursos__item img{
+            width: 40vw;
+        }        
+
+
+
+
+        .calendario{
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+        }
+
+        .calendario li{
+            margin: 8vh;
+        }
+
+
+    }
   
-    @media screen and (min-width: 800px) {}
+    @media screen and (min-width: 800px) {
+        
+        .secaoCursos{
+            line-height: 5vh;
+        }
+        .secaoCursos ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "a b c"
+                                 "d e f";
+            grid-gap: 5vw;                                 
+
+        }
+
+        .secaoCursos header{
+            padding: 8% 0;
+            line-height: 8vh;
+        }
+
+        .secaoCursos__item{
+            height: 50vh;
+            width: 30vw;
+        }
+
+        .secaoCursos__item img{
+            max-width: 8vw;    
+            margin-bottom: 10%;        
+        }
+
+        .secaoCursos__item .html{
+            grid-area: a;
+        }
+
+        .secaoCursos__item .js{
+            grid-area: b;
+        }
+
+        .secaoCursos__item .react{
+            grid-area: c;
+        }
+
+        .secaoCursos__item .py{
+            grid-area: d;
+        }
+
+        .secaoCursos__item .django{
+            grid-area: e;
+        }
+
+        .secaoCursos__item .soft{
+            grid-area: f;
+        }
+
+        .secaoCalendar header{
+            margin-bottom: 4vh;
+        }
+
+        .calendario{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .calendario li{
+            width: 30vw ;
+        }
+        .calendario-data-rodape button{
+            width: 25vw;
+        }
+    }
 /* MEDIA QUERIES */
